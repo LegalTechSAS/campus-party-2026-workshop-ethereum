@@ -1,0 +1,46 @@
+# Dependencias y archivos generados: se reconstruyen con npm ci y npm run compile.
+node_modules/
+build/
+artifacts/
+cache/
+coverage/
+.nyc_output/
+
+# Secretos locales. Solo las plantillas vacías se publican.
+.env
+.env.*
+*.env
+!.env.example
+!ENV.example
+*.pem
+*.key
+*.p12
+*.pfx
+keystore/
+keystores/
+wallets/
+
+# Historial de agentes, despliegues, presupuestos y archivos de participantes.
+data/
+inbox/
+processed/
+resumen.txt
+
+# Registros, respaldos y archivos temporales.
+*.log
+npm-debug.log*
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
+
+# Configuración personal del editor y del sistema operativo.
+.vscode/
+.idea/
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Se conserva package-lock.json para instalaciones reproducibles.

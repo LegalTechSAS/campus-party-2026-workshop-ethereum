@@ -1,0 +1,8 @@
+# Dependencias, compilación y datos generados por la demo.
+node_modules/
+build/
+data/
+inbox/
+processed/
+package-lock.json
+.DS_Store

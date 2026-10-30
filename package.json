@@ -1,0 +1,59 @@
+{
+  "name": "workshop-ethereum-agentes-campus-party",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "chain": "hardhat node --hostname 127.0.0.1",
+    "compile": "node scripts/compile.mjs",
+    "setup": "node scripts/workshop.mjs setup",
+    "fund": "node scripts/workshop.mjs fund",
+    "status": "node scripts/workshop.mjs status",
+    "submit": "node scripts/workshop.mjs submit",
+    "approve": "node scripts/workshop.mjs approve",
+    "reject": "node scripts/workshop.mjs reject",
+    "check": "node scripts/workshop.mjs check",
+    "test": "node scripts/workshop.mjs test",
+    "agent": "node scripts/agent.mjs",
+    "worker": "node scripts/agent.mjs --watch",
+    "enqueue": "node scripts/enqueue.mjs",
+    "test:agent": "node --test tests/agent.test.mjs tests/application.test.mjs tests/ipfs.test.mjs tests/reputation.test.mjs",
+    "inspect": "node scripts/inspect.mjs",
+    "test:integration": "npm run compile && node --test tests/integration.test.mjs",
+    "format": "prettier --write src scripts tests contracts hardhat.config.ts eslint.config.mjs .prettierrc.json package.json",
+    "format:check": "prettier --check src scripts tests contracts hardhat.config.ts eslint.config.mjs .prettierrc.json package.json",
+    "lint": "eslint src scripts tests eslint.config.mjs",
+    "test:architecture": "node --test tests/architecture.test.mjs",
+    "verify": "npm run format:check && npm run lint && npm run test:architecture && npm run test:agent && npm run test:integration && npm run test:sepolia",
+    "sepolia:doctor": "node scripts/sepolia.mjs doctor",
+    "sepolia:deploy": "npm run compile && node scripts/sepolia.mjs deploy",
+    "sepolia:fund-roles": "node scripts/sepolia.mjs fund-roles",
+    "agent:local": "node scripts/agent.mjs --network local",
+    "test:sepolia": "npm run compile && node --test tests/sepolia.test.mjs",
+    "agent:register": "node scripts/reputation.mjs register",
+    "reputation": "node scripts/reputation.mjs read",
+    "demo:reject-revert": "node scripts/demo-sepolia.mjs",
+    "demo:reject-revert:local": "npm run compile && node scripts/demo-reject-revert.mjs"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.4.0",
+    "@openzeppelin/contracts-upgradeable": "5.4.0",
+    "ethers": "6.17.0",
+    "hardhat": "3.21.0",
+    "solc": "0.8.28"
+  },
+  "overrides": {
+    "zod": "^4.6.6",
+    "tmp": "^0.2.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.13.0",
+    "globals": "16.5.0",
+    "prettier": "3.9.10",
+    "prettier-plugin-solidity": "2.4.1"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

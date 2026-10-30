@@ -1,0 +1,32 @@
+{
+  "source": "https://eips.ethereum.org/EIPS/eip-8183",
+  "retrieved": "2026-10-26",
+  "license": "CC0-1.0 (reference implementation)",
+  "files": {
+    "AgenticCommerce.sol": "4f48f573cf5e05c70170b53a3cb95755e76ce40c8f1f8d3d339b95c289e5e8d8",
+    "IACPHook.sol": "00103fb36b2b75118713c60142584e6411b85c721103eb00654aa3421d9305da"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.4.0",
+    "@openzeppelin/contracts-upgradeable": "5.4.0",
+    "ethers": "6.17.0",
+    "hardhat": "3.21.0",
+    "solc": "0.8.28"
+  },
+  "validation": "Validación automatizada: formato, lint y 26 pruebas (2 arquitectura, 19 agente/aplicación/IPFS/reputación, 1 integración EVM y 4 adaptador Sepolia/configuración). IA e IPFS usan respuestas controladas en pruebas. La demo reject/revert ejecuta contratos reales en una EVM local temporal. Demo pública Sepolia verificada: revert minado status 0 y rechazo status 1 con devolución del depósito.",
+  "educationalEdition": {
+    "language": "es",
+    "changes": "Contratos con comentarios didácticos en español y formato uniforme; árboles sintácticos verificados contra las cuatro fuentes originales, sin cambios de lógica. Aplicación reorganizada por capas de Clean Architecture.",
+    "files": {
+      "AgenticCommerce.sol": "4f6954e4f182c5163633eb73042c9350320426de8a1043ccdaacc40f33e8bb36",
+      "IACPHook.sol": "036300c2fe3dc208f8d034c7c1c91818f67b62a7467e36ead77f9ae584d7351d",
+      "ProxyImport.sol": "216bc7a28833b21706b5871a45d2ce06ea9dee19bf69d56626d8f12d566cb059",
+      "WorkshopToken.sol": "dc2768e5b9b8a8c2ced02ac9a370780fb474abaf1e5be1e2a72ed001fc46ea44"
+    }
+  },
+  "network": {
+    "default": "Sepolia",
+    "chainId": 11155111,
+    "deploymentPolicy": "Cada participante despliega su token y comercio, y registra su identidad en los registros compartidos ERC-8004. Sus direcciones y recibos se guardan en data/sepolia/, excluido del repositorio."
+  }
+}
